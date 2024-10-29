@@ -34,4 +34,42 @@ for key in ('W1','B1','W2','B2'):
     print(key)
 
 # params = {"W1":1, "B1":2, "W2":2, "B2":2}
+# dotとは内積
+A = np.array([1, 2, 3])
+B = np.array([2, 4, 6])
+np.dot(A, B)
 
+print("dddd")
+for i in range(5):
+    print(i)
+  
+def double(n):
+    return n * 2
+
+
+# ラムダ式
+# https://qiita.com/nagataaaas/items/531b1fc5ce42a791c7df
+lambda_ver = lambda n: n * 2
+
+print(double(2) == lambda_ver(2))
+    # True  
+
+
+def hoge(f, a):
+    val =f(a)
+    return val
+
+b = 3
+c = 4
+
+lambda_ver2 = lambda a: b * 3
+d = hoge(lambda_ver2, 3)
+print(d)
+
+def fuga(f, a, b):
+    val =f(a, b)
+    return val
+
+lambda_ver3 = lambda u, v: v * 3
+d = fuga(lambda_ver3, 3, 2)
+print(d)
